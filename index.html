@@ -1,0 +1,88 @@
+<body>
+
+  <!-- Navigation -->
+  <div class="tm-top-bar-bg"></div>
+  <div class="tm-top-bar" id="tm-top-bar">
+    <div class="container">
+      <div class="row">
+
+        <nav class="navbar navbar-expand-lg narbar-light">
+          <a class="navbar-brand mr-auto" href="index.html">Ozod's Forex Journey</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav"
+            aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="strategies.html">Strategies</a></li>
+              <li class="nav-item"><a class="nav-link" href="lessons.html">Lessons</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container tm-main">
+    <div class="row tm-main-row">
+      <div class="col-12 tm-content">
+        <h2 class="tm-page-title">Welcome to My Forex Trading Journey</h2>
+        <p>
+          Hello and welcome! I'm Ozod, and this website is a small window into my personal experience learning and practicing Forex trading.
+          I've been exploring this world since 2022 — learning through books, YouTube, and hands-on practice.
+          Here, you'll find the strategies I use, lessons I’ve learned, and tools that helped me improve.
+        </p>
+
+        <!-- ROI Calculator -->
+        <button onclick="calculateROI()">💹 Calculate ROI</button>
+        <p id="roiResult" style="margin-top: 10px; font-weight: bold;"></p>
+
+        <!-- Link to original template -->
+        <p style="margin-top: 30px;">Original template:
+          <a href="https://www.tooplate.com/view/2135-mini-finance" target="_blank">Tooplate 2135 Mini Finance</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="tm-footer text-center">
+    <p>ID: 22224041 | Name: Ozod</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="slick/slick.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/moment.min.js"></script>
+  <script src="js/tooplate-script.js"></script>
+
+  <!-- JavaScript: Welcome Alert -->
+  <script>
+    alert("Welcome to My Forex Trading Journey!");
+  </script>
+
+  <!-- JavaScript: ROI Calculator -->
+  <script>
+    function calculateROI() {
+      let initial = parseFloat(prompt("Enter your starting amount ($):"));
+      let rate = parseFloat(prompt("Enter your monthly % growth rate:"));
+      let months = parseInt(prompt("Enter the number of months:"));
+
+      if (isNaN(initial) || isNaN(rate) || isNaN(months)) {
+        alert("Please enter valid numbers.");
+        return;
+      }
+
+      let result = initial * Math.pow(1 + rate / 100, months);
+      document.getElementById("roiResult").innerText =
+        "📈 After " + months + " months, you'll have: $" + result.toFixed(2);
+    }
+  </script>
+
+</body>
